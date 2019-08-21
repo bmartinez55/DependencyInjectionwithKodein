@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="textView_quotes" type="id">textView_quotes</item>
+    <item name="textView_quotes" type="id"></item>
 </resources>
