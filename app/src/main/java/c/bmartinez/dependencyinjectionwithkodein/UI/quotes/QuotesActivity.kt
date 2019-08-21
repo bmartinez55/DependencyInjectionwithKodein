@@ -8,11 +8,17 @@ import androidx.lifecycle.ViewModelProviders
 import c.bmartinez.dependencyinjectionwithkodein.Data.model.Quote
 import c.bmartinez.dependencyinjectionwithkodein.R
 import kotlinx.android.synthetic.main.activity_quotes.*
+import org.kodein.di.Kodein
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.closestKodein
+import org.kodein.di.generic.instance
 import java.lang.StringBuilder
 
-class QuotesActivity : AppCompatActivity() {
+class QuotesActivity : AppCompatActivity(), KodeinAware {
 
-    private val viewModelFactory: QuotesViewModelFactory = QuotesViewModelFactory()
+    override val kodein by closestKodein()
+
+    private val viewModelFactory: QuotesViewModelFactory by instance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
