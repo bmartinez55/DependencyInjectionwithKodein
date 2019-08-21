@@ -1,5 +1,5 @@
 package c.bmartinez.dependencyinjectionwithkodein.Data.db
 
-interface Database {
+interface Database : QuoteDao {
     val quoteDao: QuoteDao
 }
